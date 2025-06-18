@@ -15,7 +15,7 @@
 
     <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
         <title>viser._gui_api - viser</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5349f25f" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=5976cbfc" />
     <link rel="stylesheet" type="text/css" href="../../../_static/ansi.css" />
@@ -26,8 +26,8 @@
 
 <style>
   body {
-    --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
   --color-code-background: #f4f4f4;
   --color-code-foreground: #000;
   
@@ -468,7 +468,7 @@
 <span class="n">TLiteralString</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;TLiteralString&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">LiteralString</span><span class="p">)</span>
 <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
 <span class="n">LengthTenStrTuple</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
-<span class="n">Color</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span>
+<span class="n">LiteralColor</span><span class="p">:</span> <span class="n">TypeAlias</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span>
     <span class="s2">&quot;dark&quot;</span><span class="p">,</span>
     <span class="s2">&quot;gray&quot;</span><span class="p">,</span>
     <span class="s2">&quot;red&quot;</span><span class="p">,</span>
@@ -634,12 +634,15 @@
             <span class="c1"># when we expect tuples but the Javascript side gives us lists.</span>
             <span class="k">if</span> <span class="n">prop_name</span> <span class="o">==</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span>
                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-                    <span class="c1"># We currently assume all tuple types have length &gt;0, and</span>
-                    <span class="c1"># contents are all the same type.</span>
-                    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
-                    <span class="n">typ</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-                    <span class="k">assert</span> <span class="nb">all</span><span class="p">([</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">typ</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">])</span>
-                    <span class="n">prop_value</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">typ</span><span class="p">(</span><span class="n">new</span><span class="p">)</span> <span class="k">for</span> <span class="n">new</span> <span class="ow">in</span> <span class="n">prop_value</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="c1"># We currently assume non-empty tuple types have length</span>
+                        <span class="c1"># greater than 0, and contents are all the same type.</span>
+                        <span class="n">typ</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                        <span class="k">assert</span> <span class="nb">all</span><span class="p">([</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">typ</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">])</span>
+                        <span class="n">prop_value</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">typ</span><span class="p">(</span><span class="n">new</span><span class="p">)</span> <span class="k">for</span> <span class="n">new</span> <span class="ow">in</span> <span class="n">prop_value</span><span class="p">])</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># Empty tuple.</span>
+                        <span class="n">prop_value</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">prop_value</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">prop_value</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">handle_state</span><span class="o">.</span><span class="n">value</span><span class="p">)(</span><span class="n">prop_value</span><span class="p">)</span>
 
@@ -703,7 +706,7 @@
         <span class="k">assert</span> <span class="n">message</span><span class="o">.</span><span class="n">source_component_uuid</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gui_input_handle_from_uuid</span>
 
         <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_file_upload_states</span><span class="p">[</span><span class="n">message</span><span class="o">.</span><span class="n">transfer_uuid</span><span class="p">]</span>
-        <span class="n">state</span><span class="p">[</span><span class="s2">&quot;parts&quot;</span><span class="p">][</span><span class="n">message</span><span class="o">.</span><span class="n">part</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span>
+        <span class="n">state</span><span class="p">[</span><span class="s2">&quot;parts&quot;</span><span class="p">][</span><span class="n">message</span><span class="o">.</span><span class="n">part_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">content</span>
         <span class="n">total_bytes</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;total_bytes&quot;</span><span class="p">]</span>
 
         <span class="k">with</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;lock&quot;</span><span class="p">]:</span>
@@ -852,7 +855,7 @@
                 <span class="p">)</span>
                 <span class="n">colors_cast</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span>
                     <span class="n">LengthTenStrTuple</span><span class="p">,</span>
-                    <span class="nb">tuple</span><span class="p">(</span><span class="n">_hex_from_hls</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">ls</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
+                    <span class="nb">tuple</span><span class="p">(</span><span class="n">_hex_from_hls</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">ls</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
                 <span class="p">)</span>
 
         <span class="k">assert</span> <span class="n">colors_cast</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">all</span><span class="p">(</span>
@@ -1211,7 +1214,7 @@
         <span class="n">disabled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">color</span><span class="p">:</span> <span class="n">Color</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">LiteralColor</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">icon</span><span class="p">:</span> <span class="n">IconName</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">order</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GuiButtonHandle</span><span class="p">:</span>
@@ -1264,7 +1267,7 @@
         <span class="n">disabled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">color</span><span class="p">:</span> <span class="n">Color</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">LiteralColor</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">icon</span><span class="p">:</span> <span class="n">IconName</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">mime_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;*/*&quot;</span><span class="p">,</span>
         <span class="n">order</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1412,16 +1415,19 @@
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">initial_value</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">multiline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">disabled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">order</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GuiTextHandle</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a text input to the GUI.</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Add a text input to the GUI.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            label: Label to display on the text input.</span>
 <span class="sd">            initial_value: Initial value of the text input.</span>
+<span class="sd">            multiline: Whether the text input supports multiple lines, delimited with</span>
+<span class="sd">                the \n character.</span>
 <span class="sd">            disabled: Whether the text input is disabled.</span>
 <span class="sd">            visible: Whether the text input is visible.</span>
 <span class="sd">            hint: Optional hint to display on hover.</span>
@@ -1447,6 +1453,7 @@
                         <span class="n">hint</span><span class="o">=</span><span class="n">hint</span><span class="p">,</span>
                         <span class="n">disabled</span><span class="o">=</span><span class="n">disabled</span><span class="p">,</span>
                         <span class="n">visible</span><span class="o">=</span><span class="n">visible</span><span class="p">,</span>
+                        <span class="n">multiline</span><span class="o">=</span><span class="n">multiline</span><span class="p">,</span>
                     <span class="p">),</span>
                 <span class="p">),</span>
             <span class="p">)</span>
@@ -1750,7 +1757,7 @@
         <span class="n">value</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
         <span class="n">visible</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">animated</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="n">color</span><span class="p">:</span> <span class="n">Color</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">color</span><span class="p">:</span> <span class="n">LiteralColor</span> <span class="o">|</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">order</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">GuiProgressBarHandle</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a progress bar to the GUI.</span>
@@ -2060,17 +2067,14 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="GuiApi.GuiMessage">
-<a class="viewcode-back" href="../../../gui_api/#viser.GuiApi.GuiMessage">[docs]</a>
-    <span class="k">class</span><span class="w"> </span><span class="nc">GuiMessage</span><span class="p">(</span><span class="n">Protocol</span><span class="p">[</span><span class="n">GuiInputPropsType</span><span class="p">]):</span>
+    <span class="k">class</span><span class="w"> </span><span class="nc">_GuiMessage</span><span class="p">(</span><span class="n">Protocol</span><span class="p">[</span><span class="n">GuiInputPropsType</span><span class="p">]):</span>
         <span class="n">uuid</span><span class="p">:</span> <span class="nb">str</span>
-        <span class="n">props</span><span class="p">:</span> <span class="n">GuiInputPropsType</span></div>
-
+        <span class="n">props</span><span class="p">:</span> <span class="n">GuiInputPropsType</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_create_gui_input</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span>
-        <span class="n">message</span><span class="p">:</span> <span class="n">GuiMessage</span><span class="p">,</span>
+        <span class="n">message</span><span class="p">:</span> <span class="n">_GuiMessage</span><span class="p">,</span>
         <span class="n">is_button</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">_GuiHandleState</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Private helper for adding a simple GUI element.&quot;&quot;&quot;</span>

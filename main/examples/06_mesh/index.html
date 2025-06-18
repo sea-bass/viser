@@ -16,7 +16,7 @@
 
     <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
         <title>Meshes - viser</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=5349f25f" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5976cbfc" />
     <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
@@ -27,8 +27,8 @@
 
 <style>
   body {
-    --color-code-background: #272822;
-  --color-code-foreground: #f8f8f2;
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
   --color-code-background: #f4f4f4;
   --color-code-foreground: #000;
   
@@ -421,13 +421,19 @@
 <span class="linenos">25</span><span class="p">)</span>
 <span class="linenos">26</span><span class="n">server</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">add_mesh_trimesh</span><span class="p">(</span>
 <span class="linenos">27</span>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;/trimesh&quot;</span><span class="p">,</span>
-<span class="linenos">28</span>    <span class="n">mesh</span><span class="o">=</span><span class="n">mesh</span><span class="o">.</span><span class="n">smoothed</span><span class="p">(),</span>
+<span class="linenos">28</span>    <span class="n">mesh</span><span class="o">=</span><span class="n">mesh</span><span class="p">,</span>
 <span class="linenos">29</span>    <span class="n">wxyz</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">SO3</span><span class="o">.</span><span class="n">from_x_radians</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">wxyz</span><span class="p">,</span>
 <span class="linenos">30</span>    <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
 <span class="linenos">31</span><span class="p">)</span>
-<span class="linenos">32</span>
-<span class="linenos">33</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="linenos">34</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">10.0</span><span class="p">)</span>
+<span class="linenos">32</span><span class="n">grid</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">add_grid</span><span class="p">(</span>
+<span class="linenos">33</span>    <span class="s2">&quot;grid&quot;</span><span class="p">,</span>
+<span class="linenos">34</span>    <span class="n">width</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span>
+<span class="linenos">35</span>    <span class="n">height</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span>
+<span class="linenos">36</span>    <span class="n">position</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">]),</span>
+<span class="linenos">37</span><span class="p">)</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">40</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">10.0</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
