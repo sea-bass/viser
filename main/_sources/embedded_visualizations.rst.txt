@@ -1,4 +1,4 @@
-Embedding Visualizations
+Embedded Visualizations
 ========================
 
 This guide describes how to export 3D visualizations from Viser and embed them into static webpages. The process involves three main steps: exporting scene state, creating a client build, and hosting the visualization.
@@ -112,7 +112,7 @@ Step 2: Creating a Viser Client Build
 To serve the 3D visualization, you'll need two things:
 
 1. The ``.viser`` file containing your scene data
-2. A build of the Viser client (static HTML/JS/CSS files)
+2. A build of the Viser client
 
 With Viser installed, create the Viser client build using the command-line tool:
 
@@ -140,7 +140,6 @@ For our hosting instructions, we're going to assume the following directory stru
     │   └── recording.viser    # Your exported scene data
     └── viser-client/
         ├── index.html         # Generated client files
-        ├── assets/
         └── ...
 
 This is just a suggestion; you can structure your files however you like.
@@ -187,16 +186,81 @@ Your visualization will be available at: ``https://user.github.io/repo/viser-cli
 You can embed this into other webpages using an HTML ``<iframe />`` tag.
 
 
+The Scene Tree Panel
+--------------------
+
+During offline playback, a "Scene tree" panel is available. Like the scene
+tree in the regular control panel, it can be used to inspect the scene
+hierarchy, toggle visibility of individual nodes, and edit scene node
+properties. Changes are local to the browser; they don't persist and are
+overwritten by property updates in the recording.
+
+The panel is hidden by default, keeping the canvas clean. A scene tree button
+opens it: in the playback bar for animated recordings, or floating in the
+top-right corner for static scenes (which have no playback bar).
+
+.. figure:: _static/playback_scene_tree.png
+   :alt: Scene tree panel during offline playback
+
+   The scene tree panel opened from the playback bar's scene tree button.
+
+.. figure:: _static/playback_scene_tree_static.png
+   :alt: Floating scene tree button for static scenes
+
+   Static scenes show a floating scene tree button in the top-right corner.
+
+
 Step 4: Setting the initial camera pose
 -----------------------------------------------
 
-To set the initial camera pose, you can add a ``&logCamera`` parameter to the URL:
+Using Python
+~~~~~~~~~~~~
+
+The easiest way to set the initial camera pose is using :attr:`viser.ViserServer.initial_camera`
+before serializing or calling :meth:`~viser.SceneApi.show`:
+
+.. code-block:: python
+
+   import viser
+
+   server = viser.ViserServer()
+   server.scene.add_box("/box", color=(255, 0, 0), dimensions=(1, 1, 1))
+
+   # Set the initial camera pose.
+   server.initial_camera.position = (2.0, -4.0, 1.0)
+   server.initial_camera.look_at = (0.0, 0.0, 0.0)
+   server.initial_camera.up = (0.0, 0.0, 1.0)
+
+   # The initial camera is included when serializing.
+   data = server.get_scene_serializer().serialize()
+
+This sets the camera pose that will be used when the visualization first loads.
+See :class:`viser.InitialCameraConfig` for all available options including
+``fov``, ``near``, and ``far``.
+
+Using URL Parameters
+~~~~~~~~~~~~~~~~~~~~
+
+You can also override the initial camera pose using URL parameters. This is
+useful for fine-tuning the camera position after export.
+
+To find the camera parameters, add a ``&logCamera`` parameter to the URL:
 
 * ``http://localhost:8000/viser-client/?playbackPath=http://localhost:8000/recordings/recording.viser&logCamera``
 
 Then, open your Javascript console. You should see the camera pose printed
 whenever you move the camera. It should look something like this:
 
-* ``&initialCameraPosition=2.216,-4.233,-0.947&initialCameraLookAt=-0.115,0.346,-0.192&initialCameraUp=0.329,-0.904,0.272``
+* ``&initialCameraPosition=2.216,-4.233,-0.947&initialCameraLookAt=-0.115,0.346,-0.192&initialCameraUp=0.329,-0.904,0.272&initialCameraFov=0.7854&initialCameraNear=0.01&initialCameraFar=1000``
 
-You can then add this string to the URL to set the initial camera pose.
+You can then add this string to the URL to set the initial camera pose. URL
+parameters take priority over the Python-configured initial camera.
+
+Available URL parameters:
+
+* ``initialCameraPosition`` - Camera position as ``x,y,z``
+* ``initialCameraLookAt`` - Look-at target as ``x,y,z``
+* ``initialCameraUp`` - Up direction as ``x,y,z``
+* ``initialCameraFov`` - Field of view in radians
+* ``initialCameraNear`` - Near clipping plane distance
+* ``initialCameraFar`` - Far clipping plane distance

@@ -12,12 +12,14 @@
         gtag('js', new Date());
         gtag('config', 'G-RRGY51J5ZH');
     </script>
-    <link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Embedding Visualizations" href="../embedded_visualizations/" /><link rel="prev" title="Frame Conventions" href="../conventions/" />
+    <link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" /><link rel="next" title="Embedded Visualizations" href="../embedded_visualizations/" /><link rel="prev" title="Performance Tips" href="../performance_tips/" />
 
     <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
         <title>Development - viser</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5976cbfc" />
     <link rel="stylesheet" type="text/css" href="../_static/ansi.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -217,7 +219,7 @@
       alt="logo"
     />
   </div>
-  <!-- <span class="sidebar-brand-text">viser</span> -->
+  <!-- <span class="sidebar-brand-text">Viser</span> -->
 
   
 </a>
@@ -229,7 +231,7 @@
 
     async function getViserVersionList() {
       // This index.txt file is written by the docs.yml GitHub action.
-      // https://github.com/nerfstudio-project/viser/blob/main/.github/workflows/docs.yml
+      // https://github.com/viser-project/viser/blob/main/.github/workflows/docs.yml
       const response = await fetch("https://viser.studio/versions/index.txt", {
         cache: "no-cache",
       });
@@ -279,7 +281,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <a
     class="github-button"
-    href="https://github.com/nerfstudio-project/viser"
+    href="https://github.com/viser-project/viser"
     data-color-scheme="no-preference: light; light: light; dark: light;"
     data-size="large"
     data-show-count="true"
@@ -293,64 +295,102 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/getting_started/">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/getting_started/hello_world/">Hello world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/getting_started/core_concepts/">Core concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/scene/">Scene Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Scene Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/coordinate_frames/">Coordinate frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/point_clouds/">Point cloud visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/meshes/">3D mesh visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/lines/">Line visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/images/">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/meshes_batched/">Batched mesh rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/lighting/">Lighting and shadows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/background_composite/">Depth compositing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/set_up_direction/">Set up direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/gaussian_splats/">Gaussian splats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/fog/">Distance fog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/scene/arrows/">Arrow visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/gui/">GUI Controls</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of GUI Controls</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/basic_controls/">Basic GUI controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/callbacks/">GUI callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/layouts/">GUI layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/markdown/">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/modals/">Modal dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/theming/">Theming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/notifications/">Notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/plotly_integration/">Plotly integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/uplot/">uPlot integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/plots_as_images/">Plots as images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/commands/">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/gui/panels/">Standalone panels</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/interaction/">User Interaction</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of User Interaction</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/click_meshes/">Mesh click events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/scene_pointer/">Scene pointer events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/get_renders/">Get renders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/camera_poses/">Camera pose tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/camera_commands/">Programmatic camera control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/gui_in_scene/">3D GUI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/scene_node_drag/">Scene-node drag events with rigid-body physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/interaction/batched_scene_node_drag/">Drag events on batched scene nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/demos/">Demos</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Demos</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/record3d_visualizer/">Record3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/colmap_visualizer/">COLMAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/urdf_visualizer/">URDF robot visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/smpl_visualizer/">SMPL human model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/smpl_skinned/">SMPL skinned mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/demos/games/">Games</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/core/">Core API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Core API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/core/server/">Viser Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/core/scene_api/">Scene API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/core/gui_api/">GUI API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/handles/">Handles API</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Handles API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/handles/client_handles/">Client Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/handles/camera_handles/">Camera Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/handles/gui_handles/">GUI Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/handles/scene_handles/">Scene Handles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/advanced/">Advanced API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Advanced API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/advanced/events/">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/advanced/icons/">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/advanced/theme/">Theme Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/advanced/uplot/">uPlot Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/advanced/state_serializer/">State Serializer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/auxiliary/">Auxiliary API</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Auxiliary API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/auxiliary/transforms/">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/auxiliary/infrastructure/">Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/auxiliary/extras/">Record3D + URDF Helpers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notes</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interactive_notebooks/">Interactive Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conventions/">Frame Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../performance_tips/">Performance Tips</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../embedded_visualizations/">Embedding Visualizations</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Basics)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../server/">Viser Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scene_api/">Scene API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gui_api/">GUI API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../state_serializer/">State Serializer</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Advanced)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../client_handles/">Client Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../camera_handles/">Camera Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gui_handles/">GUI Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scene_handles/">Scene Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../events/">Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../icons/">Icons</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Auxiliary)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../transforms/">Transforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../infrastructure/">Communication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extras/">Record3D + URDF Helpers</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../examples/00_coordinate_frames/">Coordinate frames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/01_image/">Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/02_gui/">GUI basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/03_gui_callbacks/">GUI callbacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/04_camera_poses/">Camera poses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/05_camera_commands/">Camera commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/06_mesh/">Meshes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/07_record3d_visualizer/">Record3D visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/08_smpl_visualizer/">SMPL model visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/09_urdf_visualizer/">Robot URDF visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/10_realsense/">RealSense visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/11_colmap_visualizer/">COLMAP visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/12_click_meshes/">Mesh click events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/13_theming/">Theming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/14_markdown/">Markdown demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/15_gui_in_scene/">3D GUI elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/16_modal/">Modal basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/17_background_composite/">Depth compositing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/18_lines/">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/19_get_renders/">Get renders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/20_scene_pointer/">Scene pointer events.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/21_set_up_direction/">Set up direction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/22_games/">Games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/23_plotly/">Plotly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/24_plots_as_images/">Plots as Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/25_smpl_visualizer_skinned/">SMPL visualizer (Skinned Mesh)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/26_lighting/">Lighting and Shadows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/27_notifications/">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../embedded_visualizations/">Embedded Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation/">Citation</a></li>
 </ul>
 
 </div>
@@ -397,33 +437,34 @@
 development. We assume that the repository is cloned to <code class="docutils literal notranslate"><span class="pre">~/viser</span></code>.</p>
 <section id="python-install">
 <h2>Python install<a class="headerlink" href="#python-install" title="Link to this heading">¶</a></h2>
-<p>We recommend an editable install for Python development, ideally in a virtual
-environment (eg via conda).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install package.</span>
+<p>We recommend using <a class="reference external" href="https://docs.astral.sh/uv/">uv</a> for Python development.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install uv (if not already installed).</span>
+curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+
+<span class="c1"># Run any example directly (uv handles dependencies automatically).</span>
 <span class="nb">cd</span><span class="w"> </span>~/viser
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-
-<span class="c1"># Install example dependencies.</span>
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>examples<span class="o">]</span>
+uv<span class="w"> </span>run<span class="w"> </span>--extra<span class="w"> </span>examples<span class="w"> </span>python<span class="w"> </span>examples/00_getting_started/00_hello_world.py
 </pre></div>
 </div>
-<p>After installation, any of the example scripts (<code class="docutils literal notranslate"><span class="pre">~/viser/examples</span></code>) should be
-runnable. A few of them require downloading assets, which can be done via the
-scripts in <code class="docutils literal notranslate"><span class="pre">~/viser/examples/assets</span></code>.</p>
-<p><strong>Linting, formatting, type-checking.</strong></p>
-<p>First, install developer tools:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pip.</span>
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
-pre-commit<span class="w"> </span>install
-</pre></div>
-</div>
-<p>For code quality, rely primarily on <code class="docutils literal notranslate"><span class="pre">pyright</span></code> and <code class="docutils literal notranslate"><span class="pre">ruff</span></code>:</p>
+</section>
+<section id="linting-formatting-type-checking">
+<h2>Linting, formatting, type-checking<a class="headerlink" href="#linting-formatting-type-checking" title="Link to this heading">¶</a></h2>
+<p>For code quality, we use <code class="docutils literal notranslate"><span class="pre">pyright</span></code> for type checking and <code class="docutils literal notranslate"><span class="pre">ruff</span></code> for linting
+and formatting.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check static types.</span>
-pyright
+uv<span class="w"> </span>run<span class="w"> </span>--extra<span class="w"> </span>dev<span class="w"> </span>pyright
 
-<span class="c1"># Lint and format.</span>
-ruff<span class="w"> </span>check<span class="w"> </span>--fix<span class="w"> </span>.
-ruff<span class="w"> </span>format<span class="w"> </span>.
+<span class="c1"># Lint and auto-fix issues.</span>
+uvx<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>--fix
+
+<span class="c1"># Format code.</span>
+uvx<span class="w"> </span>ruff<span class="w"> </span>format
+</pre></div>
+</div>
+</section>
+<section id="running-tests">
+<h2>Running tests<a class="headerlink" href="#running-tests" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>--extra<span class="w"> </span>dev<span class="w"> </span>pytest
 </pre></div>
 </div>
 </section>
@@ -456,7 +497,7 @@ version compatibility to prevent security issues and crashes from mismatched ver
 <p>To synchronize message definitions and version information between the Python backend and TypeScript frontend,
 use the <code class="docutils literal notranslate"><span class="pre">sync_client_server.py</span></code> script:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/viser
-python<span class="w"> </span>sync_client_server.py
+uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>sync_client_server.py<span class="w"> </span>--sync-messages<span class="w"> </span>--sync-version
 </pre></div>
 </div>
 <p>This script:</p>
@@ -471,13 +512,51 @@ python<span class="w"> </span>sync_client_server.py
 <li><p>Updating the version in <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code></p></li>
 </ul>
 </section>
+<section id="wire-format">
+<h3>Wire Format<a class="headerlink" href="#wire-format" title="Link to this heading">¶</a></h3>
+<p>Messages are sent over WebSocket using a hybrid format that separates lightweight
+metadata from binary array data.</p>
+<p><strong>Encoding (Python server):</strong></p>
+<ol class="arabic simple">
+<li><p>Binary arrays (numpy) are extracted from messages and replaced with tagged
+placeholder dicts: <code class="docutils literal notranslate"><span class="pre">{&quot;__binary_index&quot;:</span> <span class="pre">i,</span> <span class="pre">&quot;dtype&quot;:</span> <span class="pre">&quot;&lt;f4&quot;}</span></code>.</p></li>
+<li><p>The remaining metadata is encoded with msgpack, then compressed with zstd.</p></li>
+<li><p>The raw binary arrays are appended uncompressed after the compressed metadata,
+with 8-byte alignment padding between buffers.</p></li>
+</ol>
+<p>The wire layout is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">8</span> <span class="nb">bytes</span><span class="p">]</span> <span class="n">decompressed</span> <span class="n">size</span> <span class="n">of</span> <span class="n">msgpack</span> <span class="p">(</span><span class="n">little</span><span class="o">-</span><span class="n">endian</span> <span class="n">uint64</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">8</span> <span class="nb">bytes</span><span class="p">]</span> <span class="n">compressed</span> <span class="n">size</span> <span class="n">of</span> <span class="n">msgpack</span> <span class="p">(</span><span class="n">little</span><span class="o">-</span><span class="n">endian</span> <span class="n">uint64</span><span class="p">)</span>
+<span class="p">[</span><span class="n">N</span> <span class="nb">bytes</span><span class="p">]</span> <span class="n">zstd</span><span class="o">-</span><span class="n">compressed</span> <span class="n">msgpack</span> <span class="n">payload</span>
+<span class="p">[</span><span class="n">P</span> <span class="nb">bytes</span><span class="p">]</span> <span class="n">padding</span> <span class="n">to</span> <span class="mi">8</span><span class="o">-</span><span class="n">byte</span> <span class="n">alignment</span>
+<span class="p">[</span><span class="n">B</span> <span class="nb">bytes</span><span class="p">]</span> <span class="n">concatenated</span> <span class="n">binary</span> <span class="n">buffers</span> <span class="p">(</span><span class="n">each</span> <span class="mi">8</span><span class="o">-</span><span class="n">byte</span> <span class="n">aligned</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Decoding (TypeScript client):</strong></p>
+<ol class="arabic simple">
+<li><p>The zstd-compressed msgpack metadata is decompressed and decoded.</p></li>
+<li><p>Placeholder dicts are replaced with typed array views (<code class="docutils literal notranslate"><span class="pre">Float32Array</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Uint32Array</span></code>, etc.) pointing directly into the WebSocket’s receive buffer.</p></li>
+</ol>
+<p>Because the binary data is uncompressed and 8-byte aligned, the client can create
+typed array views without copying. This is important for high-frequency streaming
+(e.g., point clouds at 30-60fps), where eliminating copies avoids GC pressure that
+would otherwise cause frame drops.</p>
+<p>Binary data is left uncompressed because float/int arrays compress poorly, and at
+high frame rates the zstd round-trip cost outweighs the modest bandwidth savings.</p>
+<p><strong>Recordings</strong> (the <code class="docutils literal notranslate"><span class="pre">.viser</span></code> file format) use the same placeholder format, but
+the entire payload (msgpack + binary) is compressed together with zstd since
+recordings aren’t latency-sensitive. An 8-byte msgpack length header precedes the
+msgpack data inside the decompressed payload so the decoder knows where the binary
+section begins.</p>
+</section>
 </section>
 <section id="client-development">
 <h2>Client development<a class="headerlink" href="#client-development" title="Link to this heading">¶</a></h2>
 <p>For client development, we can start by launching a relevant Python script. The
 examples are a good place to start:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/viser/examples
-python<span class="w"> </span>05_camera_commands.py
+uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>05_camera_commands.py
 </pre></div>
 </div>
 <p>When a <code class="docutils literal notranslate"><span class="pre">viser</span></code> script is launched, two URLs will be printed:</p>
@@ -496,10 +575,9 @@ steps.</p>
 <p><strong>Installing dependencies.</strong></p>
 <ol class="arabic">
 <li><p><a class="reference external" href="https://nodejs.dev/en/download/package-manager">Install nodejs.</a></p></li>
-<li><p><a class="reference external" href="https://yarnpkg.com/getting-started/install">Install yarn.</a></p></li>
 <li><p>Install dependencies.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/viser/src/viser/client
-yarn<span class="w"> </span>install
+npm<span class="w"> </span>install
 </pre></div>
 </div>
 </li>
@@ -507,7 +585,7 @@ yarn<span class="w"> </span>install
 <p><strong>Launching client.</strong></p>
 <p>To launch the client, we can run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/viser/src/viser/client
-yarn<span class="w"> </span>start
+npm<span class="w"> </span>run<span class="w"> </span>dev
 </pre></div>
 </div>
 <p>from the <code class="docutils literal notranslate"><span class="pre">viser/src/viser/client</span></code> directory. After opening the client in a web
@@ -534,18 +612,18 @@ one of:</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Embedding Visualizations</div>
+                <div class="title">Embedded Visualizations</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../conventions/">
+          <a class="prev-page" href="../performance_tips/">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Frame Conventions</div>
+                <div class="title">Performance Tips</div>
                 
               </div>
             </a>
@@ -553,7 +631,7 @@ one of:</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2024
+                Copyright &#169; 2025
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -562,7 +640,7 @@ one of:</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link " href="https://github.com/nerfstudio-project/viser" aria-label="GitHub">
+              <a class="muted-link " href="https://github.com/viser-project/viser" aria-label="GitHub">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
             </svg>
@@ -588,10 +666,13 @@ one of:</p>
             <ul>
 <li><a class="reference internal" href="#">Development</a><ul>
 <li><a class="reference internal" href="#python-install">Python install</a></li>
+<li><a class="reference internal" href="#linting-formatting-type-checking">Linting, formatting, type-checking</a></li>
+<li><a class="reference internal" href="#running-tests">Running tests</a></li>
 <li><a class="reference internal" href="#client-server-synchronization">Client-Server Synchronization</a><ul>
 <li><a class="reference internal" href="#message-definitions">Message Definitions</a></li>
 <li><a class="reference internal" href="#version-compatibility">Version Compatibility</a></li>
 <li><a class="reference internal" href="#synchronization-script">Synchronization Script</a></li>
+<li><a class="reference internal" href="#wire-format">Wire Format</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#client-development">Client development</a></li>
@@ -610,5 +691,7 @@ one of:</p>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=0729d509"></script>
     </body>
 </html>

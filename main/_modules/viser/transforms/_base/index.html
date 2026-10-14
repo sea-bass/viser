@@ -17,6 +17,8 @@
         <title>viser.transforms._base - viser</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5976cbfc" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/ansi.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=302659d7" />
@@ -216,7 +218,7 @@
       alt="logo"
     />
   </div>
-  <!-- <span class="sidebar-brand-text">viser</span> -->
+  <!-- <span class="sidebar-brand-text">Viser</span> -->
 
   
 </a>
@@ -228,7 +230,7 @@
 
     async function getViserVersionList() {
       // This index.txt file is written by the docs.yml GitHub action.
-      // https://github.com/nerfstudio-project/viser/blob/main/.github/workflows/docs.yml
+      // https://github.com/viser-project/viser/blob/main/.github/workflows/docs.yml
       const response = await fetch("https://viser.studio/versions/index.txt", {
         cache: "no-cache",
       });
@@ -278,7 +280,7 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <a
     class="github-button"
-    href="https://github.com/nerfstudio-project/viser"
+    href="https://github.com/viser-project/viser"
     data-color-scheme="no-preference: light; light: light; dark: light;"
     data-size="large"
     data-show-count="true"
@@ -292,64 +294,102 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Notes</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../examples/getting_started/">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/getting_started/hello_world/">Hello world</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/getting_started/core_concepts/">Core concepts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../examples/scene/">Scene Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Scene Visualization</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/coordinate_frames/">Coordinate frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/point_clouds/">Point cloud visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/meshes/">3D mesh visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/lines/">Line visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/images/">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/meshes_batched/">Batched mesh rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/lighting/">Lighting and shadows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/background_composite/">Depth compositing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/set_up_direction/">Set up direction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/gaussian_splats/">Gaussian splats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/fog/">Distance fog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/scene/arrows/">Arrow visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../examples/gui/">GUI Controls</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of GUI Controls</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/basic_controls/">Basic GUI controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/callbacks/">GUI callbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/layouts/">GUI layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/markdown/">Markdown support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/modals/">Modal dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/theming/">Theming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/notifications/">Notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/plotly_integration/">Plotly integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/uplot/">uPlot integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/plots_as_images/">Plots as images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/commands/">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/gui/panels/">Standalone panels</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../examples/interaction/">User Interaction</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of User Interaction</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/click_meshes/">Mesh click events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/scene_pointer/">Scene pointer events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/get_renders/">Get renders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/camera_poses/">Camera pose tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/camera_commands/">Programmatic camera control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/gui_in_scene/">3D GUI elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/scene_node_drag/">Scene-node drag events with rigid-body physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/interaction/batched_scene_node_drag/">Drag events on batched scene nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../examples/demos/">Demos</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Demos</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/record3d_visualizer/">Record3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/colmap_visualizer/">COLMAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/urdf_visualizer/">URDF robot visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/smpl_visualizer/">SMPL human model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/smpl_skinned/">SMPL skinned mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../examples/demos/games/">Games</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api/core/">Core API</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Core API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/core/server/">Viser Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/core/scene_api/">Scene API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/core/gui_api/">GUI API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api/handles/">Handles API</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Handles API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/handles/client_handles/">Client Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/handles/camera_handles/">Camera Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/handles/gui_handles/">GUI Handles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/handles/scene_handles/">Scene Handles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api/advanced/">Advanced API</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Advanced API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/advanced/events/">Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/advanced/icons/">Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/advanced/theme/">Theme Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/advanced/uplot/">uPlot Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/advanced/state_serializer/">State Serializer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../api/auxiliary/">Auxiliary API</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Auxiliary API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/auxiliary/transforms/">Transforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/auxiliary/infrastructure/">Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../api/auxiliary/extras/">Record3D + URDF Helpers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../interactive_notebooks/">Interactive Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../conventions/">Frame Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../performance_tips/">Performance Tips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../development/">Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../embedded_visualizations/">Embedding Visualizations</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Basics)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../server/">Viser Server</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../scene_api/">Scene API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../gui_api/">GUI API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../state_serializer/">State Serializer</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Advanced)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../client_handles/">Client Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../camera_handles/">Camera Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../gui_handles/">GUI Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../scene_handles/">Scene Handles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../events/">Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../icons/">Icons</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API (Auxiliary)</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../transforms/">Transforms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../infrastructure/">Communication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../extras/">Record3D + URDF Helpers</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/00_coordinate_frames/">Coordinate frames</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/01_image/">Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/02_gui/">GUI basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/03_gui_callbacks/">GUI callbacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/04_camera_poses/">Camera poses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/05_camera_commands/">Camera commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/06_mesh/">Meshes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/07_record3d_visualizer/">Record3D visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/08_smpl_visualizer/">SMPL model visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/09_urdf_visualizer/">Robot URDF visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/10_realsense/">RealSense visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/11_colmap_visualizer/">COLMAP visualizer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/12_click_meshes/">Mesh click events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/13_theming/">Theming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/14_markdown/">Markdown demonstration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/15_gui_in_scene/">3D GUI elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/16_modal/">Modal basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/17_background_composite/">Depth compositing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/18_lines/">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/19_get_renders/">Get renders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/20_scene_pointer/">Scene pointer events.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/21_set_up_direction/">Set up direction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/22_games/">Games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/23_plotly/">Plotly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/24_plots_as_images/">Plots as Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/25_smpl_visualizer_skinned/">SMPL visualizer (Skinned Mesh)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/26_lighting/">Lighting and Shadows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/27_notifications/">Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../embedded_visualizations/">Embedded Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../citation/">Citation</a></li>
 </ul>
 
 </div>
@@ -394,36 +434,36 @@
 
 
 <div class="viewcode-block" id="MatrixLieGroup">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">MatrixLieGroup</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Interface definition for matrix Lie groups.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Interface definition for matrix Lie groups."""</span>
 
     <span class="n">matrix_dim</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dimension of square matrix output from `.as_matrix()`.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Dimension of square matrix output from `.as_matrix()`."""</span>
 
     <span class="n">parameters_dim</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dimension of underlying parameters, `.parameters()`.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Dimension of underlying parameters, `.parameters()`."""</span>
 
     <span class="n">tangent_dim</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dimension of tangent space.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Dimension of tangent space."""</span>
 
     <span class="n">space_dim</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Dimension of coordinates that can be transformed.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Dimension of coordinates that can be transformed."""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="c1"># Notes:</span>
         <span class="c1"># - For the constructor signature to be consistent with subclasses, `parameters`</span>
-        <span class="c1">#   should be marked as positional-only. But this isn&#39;t possible in Python 3.7.</span>
+        <span class="c1">#   should be marked as positional-only. But this isn't possible in Python 3.7.</span>
         <span class="c1"># - This method is implicitly overriden by the dataclass decorator and</span>
         <span class="c1">#   should _not_ be marked abstract.</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">parameters</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
     <span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct a group object from its underlying parameters.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Construct a group object from its underlying parameters."""</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
 <div class="viewcode-block" id="MatrixLieGroup.__init_subclass__">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.__init_subclass__">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.__init_subclass__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">__init_subclass__</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">matrix_dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -431,7 +471,7 @@
         <span class="n">tangent_dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">space_dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set class properties for subclasses. We default to dummy values.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Set class properties for subclasses. We default to dummy values."""</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">matrix_dim</span> <span class="o">=</span> <span class="n">matrix_dim</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">parameters_dim</span> <span class="o">=</span> <span class="n">parameters_dim</span>
         <span class="bp">cls</span><span class="o">.</span><span class="n">tangent_dim</span> <span class="o">=</span> <span class="n">tangent_dim</span>
@@ -449,34 +489,34 @@
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span> <span class="o">...</span>
 
 <div class="viewcode-block" id="MatrixLieGroup.__matmul__">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.__matmul__">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.__matmul__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__matmul__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Self</span><span class="p">,</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Self</span><span class="p">,</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overload for the `@` operator.</span>
+<span class="w">        </span><span class="sd">"""Overload for the `@` operator.</span>
 
 <span class="sd">        Switches between the group action (`.apply()`) and multiplication</span>
 <span class="sd">        (`.multiply()`) based on the type of `other`.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">other</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">MatrixLieGroup</span><span class="p">):</span>
             <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">space_dim</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">space_dim</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">other</span><span class="o">=</span><span class="n">other</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Invalid argument type for `@` operator: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span></div>
+            <span class="k">assert</span> <span class="kc">False</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Invalid argument type for `@` operator: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">other</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span></div>
 
 
     <span class="c1"># Factory.</span>
 
 <div class="viewcode-block" id="MatrixLieGroup.identity">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.identity">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.identity">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">identity</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span> <span class="n">batch_axes</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">DTypeLike</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns identity element.</span>
+<span class="w">        </span><span class="sd">"""Returns identity element.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch_axes: Any leading batch axes for the output transform.</span>
@@ -484,98 +524,98 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Identity element.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.from_matrix">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.from_matrix">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.from_matrix">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_matrix</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">matrix</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get group member from matrix representation.</span>
+<span class="w">        </span><span class="sd">"""Get group member from matrix representation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            matrix: Matrix representaiton.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Group member.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
     <span class="c1"># Accessors.</span>
 
 <div class="viewcode-block" id="MatrixLieGroup.as_matrix">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.as_matrix">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.as_matrix">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">as_matrix</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get transformation as a matrix. Homogeneous for SE groups.&quot;&quot;&quot;</span></div>
+<span class="w">        </span><span class="sd">"""Get transformation as a matrix. Homogeneous for SE groups."""</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.parameters">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.parameters">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.parameters">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get underlying representation.&quot;&quot;&quot;</span></div>
+<span class="w">        </span><span class="sd">"""Get underlying representation."""</span></div>
 
 
     <span class="c1"># Operations.</span>
 
 <div class="viewcode-block" id="MatrixLieGroup.apply">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.apply">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.apply">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Applies group action to a point.</span>
+<span class="w">        </span><span class="sd">"""Applies group action to a point.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            target: Point to transform.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Transformed point.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.multiply">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.multiply">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.multiply">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Composes this transformation with another.</span>
+<span class="w">        </span><span class="sd">"""Composes this transformation with another.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            self @ other</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.exp">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.exp">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.exp">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tangent</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes `expm(wedge(tangent))`.</span>
+<span class="w">        </span><span class="sd">"""Computes `expm(wedge(tangent))`.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            tangent: Tangent vector to take the exponential of.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Output.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.log">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.log">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.log">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes `vee(logm(transformation matrix))`.</span>
+<span class="w">        </span><span class="sd">"""Computes `vee(logm(transformation matrix))`.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Output. Shape should be `(tangent_dim,)`.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.adjoint">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.adjoint">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.adjoint">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">adjoint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the adjoint, which transforms tangent vectors between tangent</span>
+<span class="w">        </span><span class="sd">"""Computes the adjoint, which transforms tangent vectors between tangent</span>
 <span class="sd">        spaces.</span>
 
 <span class="sd">        More precisely, for a transform `GroupType`:</span>
@@ -588,33 +628,33 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Output. Shape should be `(tangent_dim, tangent_dim)`.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.inverse">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.inverse">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.inverse">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the inverse of our transform.</span>
+<span class="w">        </span><span class="sd">"""Computes the inverse of our transform.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Output.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.normalize">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.normalize">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.normalize">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Normalize/projects values and returns.</span>
+<span class="w">        </span><span class="sd">"""Normalize/projects values and returns.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Normalized group member.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.sample_uniform">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.sample_uniform">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.sample_uniform">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">sample_uniform</span><span class="p">(</span>
@@ -623,7 +663,7 @@
         <span class="n">batch_axes</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
         <span class="n">dtype</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">DTypeLike</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Draw a uniform sample from the group. Translations (if applicable) are in the</span>
+<span class="w">        </span><span class="sd">"""Draw a uniform sample from the group. Translations (if applicable) are in the</span>
 <span class="sd">        range [-1, 1].</span>
 
 <span class="sd">        Args:</span>
@@ -633,44 +673,44 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Sampled group member.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="MatrixLieGroup.get_batch_axes">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.MatrixLieGroup.get_batch_axes">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.MatrixLieGroup.get_batch_axes">[docs]</a>
     <span class="nd">@final</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_batch_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return any leading batch axes in contained parameters. If an array of shape</span>
+<span class="w">        </span><span class="sd">"""Return any leading batch axes in contained parameters. If an array of shape</span>
 <span class="sd">        `(100, 4)` is placed in the wxyz field of an SO3 object, for example, this will</span>
-<span class="sd">        return `(100,)`.&quot;&quot;&quot;</span>
+<span class="sd">        return `(100,)`."""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 </div>
 
 
 
 <div class="viewcode-block" id="SOBase">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SOBase">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SOBase">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SOBase</span><span class="p">(</span><span class="n">MatrixLieGroup</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for special orthogonal groups.&quot;&quot;&quot;</span></div>
+<span class="w">    </span><span class="sd">"""Base class for special orthogonal groups."""</span></div>
 
 
 
-<span class="n">ContainedSOType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;ContainedSOType&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">SOBase</span><span class="p">)</span>
+<span class="n">ContainedSOType</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">"ContainedSOType"</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">SOBase</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="SEBase">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">SEBase</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">ContainedSOType</span><span class="p">],</span> <span class="n">MatrixLieGroup</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for special Euclidean groups.</span>
+<span class="w">    </span><span class="sd">"""Base class for special Euclidean groups.</span>
 
 <span class="sd">    Each SE(N) group member contains an SO(N) rotation, as well as an N-dimensional</span>
 <span class="sd">    translation vector.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># SE-specific interface.</span>
 
 <div class="viewcode-block" id="SEBase.from_rotation_and_translation">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.from_rotation_and_translation">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.from_rotation_and_translation">[docs]</a>
     <span class="nd">@classmethod</span>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_rotation_and_translation</span><span class="p">(</span>
@@ -678,7 +718,7 @@
         <span class="n">rotation</span><span class="p">:</span> <span class="n">ContainedSOType</span><span class="p">,</span>
         <span class="n">translation</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">],</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Construct a rigid transform from a rotation and a translation.</span>
+<span class="w">        </span><span class="sd">"""Construct a rigid transform from a rotation and a translation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            rotation: Rotation term.</span>
@@ -686,11 +726,11 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Constructed transformation.</span>
-<span class="sd">        &quot;&quot;&quot;</span></div>
+<span class="sd">        """</span></div>
 
 
 <div class="viewcode-block" id="SEBase.from_rotation">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.from_rotation">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.from_rotation">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_rotation</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">rotation</span><span class="p">:</span> <span class="n">ContainedSOType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
@@ -704,7 +744,7 @@
 
 
 <div class="viewcode-block" id="SEBase.from_translation">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.from_translation">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.from_translation">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@classmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">from_translation</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">translation</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
@@ -717,23 +757,23 @@
 
 
 <div class="viewcode-block" id="SEBase.rotation">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.rotation">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.rotation">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">rotation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContainedSOType</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a transform&#39;s rotation term.&quot;&quot;&quot;</span></div>
+<span class="w">        </span><span class="sd">"""Returns a transform's rotation term."""</span></div>
 
 
 <div class="viewcode-block" id="SEBase.translation">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.translation">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.translation">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">translation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a transform&#39;s translation term.&quot;&quot;&quot;</span></div>
+<span class="w">        </span><span class="sd">"""Returns a transform's translation term."""</span></div>
 
 
     <span class="c1"># Overrides.</span>
 
 <div class="viewcode-block" id="SEBase.apply">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.apply">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.apply">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">]:</span>
@@ -741,7 +781,7 @@
 
 
 <div class="viewcode-block" id="SEBase.multiply">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.multiply">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.multiply">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>  <span class="c1"># type: ignore</span>
@@ -752,7 +792,7 @@
 
 
 <div class="viewcode-block" id="SEBase.inverse">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.inverse">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.inverse">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">inverse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
@@ -764,7 +804,7 @@
 
 
 <div class="viewcode-block" id="SEBase.normalize">
-<a class="viewcode-back" href="../../../../transforms/#viser.transforms.SEBase.normalize">[docs]</a>
+<a class="viewcode-back" href="../../../../api/auxiliary/transforms/#viser.transforms.SEBase.normalize">[docs]</a>
     <span class="nd">@final</span>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
@@ -786,7 +826,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2024
+                Copyright &#169; 2025
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -795,7 +835,7 @@
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link " href="https://github.com/nerfstudio-project/viser" aria-label="GitHub">
+              <a class="muted-link " href="https://github.com/viser-project/viser" aria-label="GitHub">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
             </svg>
@@ -817,5 +857,7 @@
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=0729d509"></script>
     </body>
 </html>
